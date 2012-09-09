@@ -41,6 +41,13 @@
     javascript to update
 
 
+    gem sqlite dev, pg prod
+    gem install heroku
+    heroku create
+    git push heroku master
+    heroku run rake db:setup
+
+
 
 # Goals
 
