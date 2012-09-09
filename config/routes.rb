@@ -1,4 +1,6 @@
 Trippple::Application.routes.draw do
+  resources :shots
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

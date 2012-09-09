@@ -1,0 +1,23 @@
+<h1>Listing shots</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shots.each do |shot| %>
+  <tr>
+    <td><%= shot.title %></td>
+    <td><%= link_to 'Show', shot %></td>
+    <td><%= link_to 'Edit', edit_shot_path(shot) %></td>
+    <td><%= link_to 'Destroy', shot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shot', new_shot_path %>
