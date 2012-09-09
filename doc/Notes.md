@@ -26,13 +26,21 @@
     Fix form
     fix layout
     fix index
+    rm show action and view, remove links, change redirects
 
+
+    match 'mine' => 'shots#mine'
+    new action
+    new view
 
 
 # Goals
 
 - List of shots
-- Interface to update
+- View of a shot (no)
+- Interface to upload
 - Interface to delete
 - Interface to edit
+- Interface to manage
+
 
