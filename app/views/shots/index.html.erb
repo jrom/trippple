@@ -2,7 +2,7 @@
   <% @shots.each do |shot| %>
     <li class="span2">
       <div class="thumbnail">
-        <%= link_to image_tag(shot.shot_image.url), shot %>
+        <%= link_to image_tag(shot.shot_image.trippple.url), shot %>
         <h3><%= shot.title %></h3>
         <p>Lorem ipsum...</p>
         <p><%=l shot.created_at %></p>

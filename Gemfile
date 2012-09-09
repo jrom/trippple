@@ -37,6 +37,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+gem 'mini_magick'
 gem 'carrierwave'
 gem 'twitter-bootstrap-rails', :group => :assets
 
