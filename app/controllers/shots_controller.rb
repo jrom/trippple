@@ -53,7 +53,7 @@ class ShotsController < ApplicationController
 
     respond_to do |format|
       if @shot.update_attributes(params[:shot])
-        format.html { redirect_to shots_url }
+        format.html { redirect_to mine_url }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -69,7 +69,7 @@ class ShotsController < ApplicationController
     @shot.destroy
 
     respond_to do |format|
-      format.html { redirect_to shots_url }
+      format.html { redirect_to mine_url }
       format.json { head :no_content }
     end
   end
