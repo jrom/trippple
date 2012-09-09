@@ -5,9 +5,9 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th></th>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:shot_image) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -15,9 +15,9 @@
   <tbody>
     <% @shots.each do |shot| %>
       <tr>
+        <td><%= image_tag shot.shot_image.trippple.url, :size => '40x30' %></td>
         <td><%= link_to shot.id, shot_path(shot) %></td>
         <td><%= shot.title %></td>
-        <td><%= shot.shot_image %></td>
         <td><%=l shot.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
