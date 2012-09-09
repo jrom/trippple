@@ -1,6 +1,8 @@
 Trippple::Application.routes.draw do
   resources :shots
 
+  root :to => 'shots#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
