@@ -39,6 +39,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'mini_magick'
+gem 'fog'
 gem 'carrierwave'
 gem 'twitter-bootstrap-rails', :group => :assets
 
