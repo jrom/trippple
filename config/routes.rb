@@ -1,6 +1,7 @@
 Trippple::Application.routes.draw do
   resources :shots
 
+  match 'mine' => 'shots#mine'
   root :to => 'shots#index'
 
   # The priority is based upon order of creation:

@@ -10,6 +10,10 @@ class ShotsController < ApplicationController
     end
   end
 
+  def mine
+    @shots = Shot.all
+  end
+
   # GET /shots/new
   # GET /shots/new.json
   def new
