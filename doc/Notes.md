@@ -33,6 +33,14 @@
     new action
     new view
 
+    rails g migration add_likes_to_shots likes:integer
+    rake db:migrate
+    pluralize shot.likes, 'likes'
+    route member post like
+    controller like, find, increment!, render likes to _json
+    javascript to update
+
+
 
 # Goals
 
@@ -42,5 +50,5 @@
 - Interface to delete
 - Interface to edit
 - Interface to manage
-
+- Ability to like
 
