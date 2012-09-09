@@ -2,7 +2,7 @@
   <% @shots.each do |shot| %>
     <li class="span3">
       <div class="thumbnail">
-        <%= link_to image_tag(shot.shot_image.trippple.url), shot %>
+        <%= image_tag(shot.shot_image.trippple.url) %>
         <p>3 likes</p>
         <p>Jack Bach</p>
       </div>

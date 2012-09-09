@@ -10,17 +10,6 @@ class ShotsController < ApplicationController
     end
   end
 
-  # GET /shots/1
-  # GET /shots/1.json
-  def show
-    @shot = Shot.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @shot }
-    end
-  end
-
   # GET /shots/new
   # GET /shots/new.json
   def new
@@ -44,7 +33,7 @@ class ShotsController < ApplicationController
 
     respond_to do |format|
       if @shot.save
-        format.html { redirect_to @shot, notice: 'Shot was successfully created.' }
+        format.html { redirect_to shots_url }
         format.json { render json: @shot, status: :created, location: @shot }
       else
         format.html { render action: "new" }
@@ -60,7 +49,7 @@ class ShotsController < ApplicationController
 
     respond_to do |format|
       if @shot.update_attributes(params[:shot])
-        format.html { redirect_to @shot, notice: 'Shot was successfully updated.' }
+        format.html { redirect_to shots_url }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
