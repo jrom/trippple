@@ -1,5 +1,9 @@
 Trippple::Application.routes.draw do
-  resources :shots
+  resources :shots do
+    member do
+      post :like
+    end
+  end
 
   match 'mine' => 'shots#mine'
   root :to => 'shots#index'

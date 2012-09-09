@@ -14,6 +14,12 @@ class ShotsController < ApplicationController
     @shots = Shot.all
   end
 
+  def like
+    @shot = Shot.find(params[:id])
+    @shot.increment! :likes
+    render :json => @shot.likes.to_json
+  end
+
   # GET /shots/new
   # GET /shots/new.json
   def new
