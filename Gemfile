@@ -38,3 +38,5 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'carrierwave'
+gem 'twitter-bootstrap-rails', :group => :assets
+
