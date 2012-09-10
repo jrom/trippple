@@ -1,3 +1,10 @@
+# TODO
+
+- Afegir paginacio al llistat general de shots
+- Authenticacio amb devise. Treure oauth.
+- Qualsevol pot entrar, fer sign up i manegar els seus shots. No els dels
+  demés.
+
 
     rails new trippple
     cd trippple
@@ -58,4 +65,7 @@
 - Interface to edit
 - Interface to manage
 - Ability to like
-
+- Sign up/in
+- Pagination
+- Manage user's shots
+- Ordenar per popular /shots/popular
