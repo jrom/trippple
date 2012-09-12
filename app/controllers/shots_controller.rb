@@ -2,7 +2,8 @@ class ShotsController < ApplicationController
   # GET /shots
   # GET /shots.json
   def index
-    @shots = Shot.all
+    page = params[:page] || 0
+    @shots = Shot.page(page).per(2)
 
     respond_to do |format|
       format.html # index.html.erb
