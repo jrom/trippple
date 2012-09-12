@@ -6,7 +6,7 @@
       <div class="thumbnail">
         <%= image_tag(shot.shot_image.trippple.url) %>
         <p class="likes"><%= link_to pluralize(shot.likes, 'likes'), like_shot_path(shot), :remote => true, :method => :post %></p>
-        <p>John Smith</p>
+        <p><%= shot.user %></p>
       </div>
     </li>
   <% end %>
