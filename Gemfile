@@ -56,4 +56,5 @@ group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'turnip'
+  gem 'database_cleaner'
 end

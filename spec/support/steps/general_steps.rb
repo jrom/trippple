@@ -18,6 +18,10 @@ step "I click on :button" do |button|
   click_button button
 end
 
+step "I click at :link" do |link|
+  click_link link
+end
+
 step "I should see :text" do |text|
   page.should have_content(text)
 end
