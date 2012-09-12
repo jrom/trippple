@@ -44,8 +44,9 @@ gem 'twitter-bootstrap-rails', :group => :assets
 gem 'kaminari'
 gem 'devise'
 
+gem 'thin' # Heroku needs this
+
 group :development do
   gem 'sqlite3'
   gem 'quiet_assets'
-  gem 'thin'
 end
