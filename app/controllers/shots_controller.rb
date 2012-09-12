@@ -3,7 +3,7 @@ class ShotsController < ApplicationController
   # GET /shots.json
   def index
     page = params[:page] || 0
-    @shots = Shot.page(page).per(5)
+    @shots = Shot.likes_ordered.page(page).per(5)
 
     respond_to do |format|
       format.html # index.html.erb
