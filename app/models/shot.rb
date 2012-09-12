@@ -9,4 +9,8 @@ class Shot < ActiveRecord::Base
   attr_accessible :title, :shot_image
 
   scope :likes_ordered, order("likes DESC")
+
+  def to_s
+    title
+  end
 end
