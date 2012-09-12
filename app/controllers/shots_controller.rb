@@ -1,4 +1,6 @@
 class ShotsController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index, :like]
+
   # GET /shots
   # GET /shots.json
   def index
@@ -12,7 +14,7 @@ class ShotsController < ApplicationController
   end
 
   def mine
-    @shots = Shot.all
+    @shots = current_user.shots
   end
 
   def like
@@ -34,7 +36,7 @@ class ShotsController < ApplicationController
 
   # GET /shots/1/edit
   def edit
-    @shot = Shot.find(params[:id])
+    @shot = current_user.shots.find(params[:id])
   end
 
   # POST /shots
@@ -57,7 +59,7 @@ class ShotsController < ApplicationController
   # PUT /shots/1
   # PUT /shots/1.json
   def update
-    @shot = Shot.find(params[:id])
+    @shot = current_user.shots.find(params[:id])
 
     respond_to do |format|
       if @shot.update_attributes(params[:shot])
@@ -73,7 +75,7 @@ class ShotsController < ApplicationController
   # DELETE /shots/1
   # DELETE /shots/1.json
   def destroy
-    @shot = Shot.find(params[:id])
+    @shot = current_user.shots.find(params[:id])
     @shot.destroy
 
     respond_to do |format|
