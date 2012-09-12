@@ -43,4 +43,4 @@ gem 'fog'
 gem 'carrierwave'
 gem 'twitter-bootstrap-rails', :group => :assets
 gem 'kaminari'
-
+gem 'devise'

@@ -1,4 +1,6 @@
 Trippple::Application.routes.draw do
+  devise_for :users
+
   resources :shots do
     member do
       post :like
