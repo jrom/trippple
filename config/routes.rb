@@ -5,9 +5,12 @@ Trippple::Application.routes.draw do
     member do
       post :like
     end
+
+    collection do
+      get :mine
+    end
   end
 
-  match 'mine' => 'shots#mine'
   root :to => 'shots#index'
 
   # The priority is based upon order of creation:

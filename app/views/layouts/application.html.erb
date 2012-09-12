@@ -28,10 +28,13 @@
           </a>
           <a class="brand" href="/">Trippple</a>
           <div class="container nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Manage", "/mine"  %></li>
-              <li><%= link_to "New shot", "/shots/new"  %></li>
-            </ul>
+
+            <% if user_signed_in? %>
+              <ul class="nav">
+                <li><%= link_to "Manage my shots", mine_shots_path %></li>
+                <li><%= link_to "New shot", new_shot_path %></li>
+              </ul>
+            <% end %>
 
             <ul class="nav pull-right">
               <% if user_signed_in? %>
