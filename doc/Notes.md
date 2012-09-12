@@ -54,6 +54,17 @@
     git push heroku master
     heroku run rake db:setup
 
+# Pagination
+
+    gem 'kaminari' # Gemfile
+    @shots = Shot.page(page).per(5) # ShotsController#index
+
+    rails g kaminari:views default # Generate the kaminari views
+
+    Copy the kaminari view contents from this repo in order to make them
+    compatible with twitter bootstrap:
+
+    https://github.com/gabetax/twitter-bootstrap-kaminari-views
 
 
 # Goals
