@@ -5,7 +5,6 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3', :group => :development
 gem 'pg', :group => :production
 
 
@@ -44,3 +43,9 @@ gem 'carrierwave'
 gem 'twitter-bootstrap-rails', :group => :assets
 gem 'kaminari'
 gem 'devise'
+
+group :development do
+  gem 'sqlite3'
+  gem 'quiet_assets'
+  gem 'thin'
+end
