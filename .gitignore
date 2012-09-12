@@ -14,3 +14,6 @@
 /log/*.log
 /tmp
 public/uploads
+
+zeus.json
+a.log

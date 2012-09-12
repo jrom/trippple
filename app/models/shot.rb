@@ -6,7 +6,7 @@ class Shot < ActiveRecord::Base
   validates_presence_of :user, :title, :shot_image
   validates_length_of :title, :minimum => 4
 
-  attr_accessible :title, :shot_image
+  attr_accessible :title, :shot_image, :user
 
   scope :likes_ordered, order("likes DESC")
 
