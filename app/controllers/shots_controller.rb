@@ -81,7 +81,7 @@ class ShotsController < ApplicationController
     @shot.destroy
 
     respond_to do |format|
-      format.html { redirect_to mine_shots_url }
+      format.html { redirect_to mine_shots_url, notice: "Shot was deleted" }
       format.json { head :no_content }
     end
   end
