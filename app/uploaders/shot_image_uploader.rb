@@ -8,7 +8,7 @@ class ShotImageUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
-    storage :s3
+    storage :fog
   else
     storage :file
   end
