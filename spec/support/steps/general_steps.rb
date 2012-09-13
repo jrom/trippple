@@ -35,3 +35,7 @@ step "I should see :text in the preheader" do |text|
     page.should have_content(text)
   end
 end
+
+step "I wait a second" do
+  sleep 1
+end
