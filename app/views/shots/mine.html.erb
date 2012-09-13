@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th></th>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @shots.each do |shot| %>
       <tr>
+        <td><%= image_tag shot.shot_image.trippple.url, :size => '40x30' %></td>
         <td><%= link_to shot.id, shot_path(shot) %></td>
         <td><%= shot.title %></td>
         <td><%=l shot.created_at %></td>

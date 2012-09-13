@@ -21,6 +21,9 @@ end
 
 gem 'jquery-rails'
 
+gem 'carrierwave'
+gem 'mini_magick'
+
 gem 'thin'
 
 group :development do
