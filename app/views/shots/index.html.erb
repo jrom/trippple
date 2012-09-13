@@ -6,6 +6,11 @@
       <div class="thumbnail">
         <h3><%= shot %></h3>
         <%= image_tag(shot.shot_image.trippple.url) %>
+        <span class="label label-info likes">
+          <%= link_to pluralize(shot.likes, 'likes'),
+            like_shot_path(shot),
+            :method => :post %>
+        </span>
       </div>
     </li>
   <% end %>

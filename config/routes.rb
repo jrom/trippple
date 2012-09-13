@@ -3,6 +3,10 @@ Trippple::Application.routes.draw do
     collection do
       get :mine
     end
+
+    member do
+      post :like
+    end
   end
 
   root :to => "shots#index"

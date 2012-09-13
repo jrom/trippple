@@ -19,6 +19,13 @@ class ShotsController < ApplicationController
     end
   end
 
+  def like
+    @shot = Shot.find(params[:id])
+    @shot.increment! :likes
+
+    redirect_to shots_url
+  end
+
   # GET /shots/new
   # GET /shots/new.json
   def new
