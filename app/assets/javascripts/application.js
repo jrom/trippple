@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+$('.likes a').live('ajax:success', function (event, data, status) {
+  $(this).html(data + ' likes');
+});

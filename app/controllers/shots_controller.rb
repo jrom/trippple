@@ -23,7 +23,7 @@ class ShotsController < ApplicationController
     @shot = Shot.find(params[:id])
     @shot.increment! :likes
 
-    redirect_to shots_url
+    render :json => @shot.likes.to_json
   end
 
   # GET /shots/new

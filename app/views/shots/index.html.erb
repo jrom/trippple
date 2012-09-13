@@ -9,7 +9,8 @@
         <span class="label label-info likes">
           <%= link_to pluralize(shot.likes, 'likes'),
             like_shot_path(shot),
-            :method => :post %>
+            :method => :post,
+            :remote => true %>
         </span>
       </div>
     </li>
