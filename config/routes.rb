@@ -1,5 +1,9 @@
 Trippple::Application.routes.draw do
-  resources :shots
+  resources :shots do
+    collection do
+      get :mine
+    end
+  end
 
   root :to => "shots#index"
 
