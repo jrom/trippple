@@ -2,7 +2,7 @@ class ShotsController < ApplicationController
   # GET /shots
   # GET /shots.json
   def index
-    @shots = Shot.all
+    @shots = Shot.ordered_by_likes.all
 
     respond_to do |format|
       format.html # index.html.erb

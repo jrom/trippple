@@ -3,6 +3,7 @@ class Shot < ActiveRecord::Base
 
   mount_uploader :shot_image, ShotImageUploader
 
+  scope :ordered_by_likes, order("likes DESC")
 
   def to_s
     title
