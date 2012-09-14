@@ -5,7 +5,7 @@
 - Qualsevol pot entrar, fer sign up i manegar els seus shots. No els dels
   demés.
 
-
+```
     rails new trippple
     cd trippple
     rails server
@@ -53,6 +53,7 @@
     heroku create
     git push heroku master
     heroku run rake db:setup
+```
 
 # Pagination
 
