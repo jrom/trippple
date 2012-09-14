@@ -40,7 +40,7 @@ gem 'jquery-rails'
 gem 'mini_magick'
 gem 'fog'
 gem 'carrierwave'
-gem 'twitter-bootstrap-rails', :group => :assets
+gem 'twitter-bootstrap-rails'
 gem 'kaminari'
 gem 'devise'
 
