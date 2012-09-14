@@ -1,4 +1,6 @@
 class ShotsController < ApplicationController
+  before_filter :authenticate_user!, :except => [ :index, :like ]
+
   # GET /shots
   # GET /shots.json
   def index
