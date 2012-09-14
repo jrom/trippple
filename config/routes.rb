@@ -1,4 +1,6 @@
 Trippple::Application.routes.draw do
+  devise_for :users
+
   resources :shots do
     collection do
       get :mine

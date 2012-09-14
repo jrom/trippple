@@ -26,6 +26,8 @@ gem 'mini_magick'
 
 gem 'thin'
 
+gem 'devise'
+
 group :development do
   gem 'sqlite3'
   gem 'quiet_assets'
