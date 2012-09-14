@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
 
   validates_presence_of :name
 
+  has_many :shots
+
   def to_s
     name
   end

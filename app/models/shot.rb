@@ -5,7 +5,9 @@ class Shot < ActiveRecord::Base
 
   scope :ordered_by_likes, order("likes DESC")
 
-  validates_presence_of :title, :shot_image
+  validates_presence_of :title, :shot_image, :user
+
+  belongs_to :user
 
   def to_s
     title
